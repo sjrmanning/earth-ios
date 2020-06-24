@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4067B53247B41140005F404 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4067B52247B41140005F404 /* AppDelegate.swift */; };
+		F4067B55247B41150005F404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4067B54247B41150005F404 /* Assets.xcassets */; };
+		F4067B58247B41150005F404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4067B56247B41150005F404 /* LaunchScreen.storyboard */; };
+		F4067B63247B41160005F404 /* EarthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4067B62247B41160005F404 /* EarthTests.swift */; };
+		F4067B74247B42CB0005F404 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4067B72247B42CB0005F404 /* MapViewModel.swift */; };
+		F41EE4BE247C5BC200FE2373 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F41EE4BD247C5BC200FE2373 /* RxSwift */; };
+		F41EE4C0247C5BC200FE2373 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = F41EE4BF247C5BC200FE2373 /* RxRelay */; };
+		F41EE4C2247C5BC200FE2373 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = F41EE4C1247C5BC200FE2373 /* RxCocoa */; };
+		F41EE4C5247C5BEF00FE2373 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41EE4C4247C5BEF00FE2373 /* ViewModel.swift */; };
+		F41EE4C7247C5D1B00FE2373 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41EE4C6247C5D1B00FE2373 /* BaseViewController.swift */; };
+		F41EE4C9247C5EBA00FE2373 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41EE4C8247C5EBA00FE2373 /* MapViewController.swift */; };
+		F41EE4D0247C666D00FE2373 /* Cartography in Frameworks */ = {isa = PBXBuildFile; productRef = F41EE4CF247C666D00FE2373 /* Cartography */; };
+		F41EE4D3247C69B300FE2373 /* Geohash.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41EE4D2247C69B300FE2373 /* Geohash.swift */; };
+		F41EE4D5247C69DA00FE2373 /* GeohashBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41EE4D4247C69DA00FE2373 /* GeohashBox.swift */; };
+		F41EE4D8247C8FEE00FE2373 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = F41EE4D7247C8FEE00FE2373 /* RxGesture */; };
+		F41EE4DB247C90DB00FE2373 /* RxOptional in Frameworks */ = {isa = PBXBuildFile; productRef = F41EE4DA247C90DB00FE2373 /* RxOptional */; };
+		F49C70992481CE9C0029C0C9 /* Geohash+Earth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C70982481CE9C0029C0C9 /* Geohash+Earth.swift */; };
+		F49C709B2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C709A2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift */; };
+		F4D1CE50248AB54900239355 /* GoogleMapsTileOverlay in Frameworks */ = {isa = PBXBuildFile; productRef = F4D1CE4F248AB54900239355 /* GoogleMapsTileOverlay */; };
+		F4D1CE52248AB70300239355 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D1CE51248AB70300239355 /* MapStyle.json */; };
+		F4D3084A248D7F4D00C1EC21 /* MapDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D30849248D7F4D00C1EC21 /* MapDrawingView.swift */; };
+		F4D3084C248D8D5700C1EC21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D3084B248D8D5700C1EC21 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4067B5F247B41160005F404 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4067B47247B41140005F404 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4067B4E247B41140005F404;
+			remoteInfo = Earth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4067B4F247B41140005F404 /* Earth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4067B52247B41140005F404 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4067B54247B41150005F404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4067B57247B41150005F404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4067B59247B41150005F404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4067B5E247B41160005F404 /* EarthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4067B62247B41160005F404 /* EarthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthTests.swift; sourceTree = "<group>"; };
+		F4067B64247B41160005F404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4067B72247B42CB0005F404 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		F41EE4C4247C5BEF00FE2373 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F41EE4C6247C5D1B00FE2373 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F41EE4C8247C5EBA00FE2373 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F41EE4D2247C69B300FE2373 /* Geohash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geohash.swift; sourceTree = "<group>"; };
+		F41EE4D4247C69DA00FE2373 /* GeohashBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeohashBox.swift; sourceTree = "<group>"; };
+		F49C70982481CE9C0029C0C9 /* Geohash+Earth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Geohash+Earth.swift"; sourceTree = "<group>"; };
+		F49C709A2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Earth.swift"; sourceTree = "<group>"; };
+		F4D1CE51248AB70300239355 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
+		F4D30849248D7F4D00C1EC21 /* MapDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDrawingView.swift; sourceTree = "<group>"; };
+		F4D3084B248D8D5700C1EC21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4067B4C247B41140005F404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F41EE4C2247C5BC200FE2373 /* RxCocoa in Frameworks */,
+				F41EE4C0247C5BC200FE2373 /* RxRelay in Frameworks */,
+				F41EE4DB247C90DB00FE2373 /* RxOptional in Frameworks */,
+				F4D1CE50248AB54900239355 /* GoogleMapsTileOverlay in Frameworks */,
+				F41EE4D8247C8FEE00FE2373 /* RxGesture in Frameworks */,
+				F41EE4BE247C5BC200FE2373 /* RxSwift in Frameworks */,
+				F41EE4D0247C666D00FE2373 /* Cartography in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4067B5B247B41160005F404 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4067B46247B41140005F404 = {
+			isa = PBXGroup;
+			children = (
+				F4067B51247B41140005F404 /* Source */,
+				F4067B61247B41160005F404 /* Tests */,
+				F4067B50247B41140005F404 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4067B50247B41140005F404 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4067B4F247B41140005F404 /* Earth.app */,
+				F4067B5E247B41160005F404 /* EarthTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4067B51247B41140005F404 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F4067B6F247B429B0005F404 /* Flows */,
+				F4067B6D247B41D00005F404 /* Core */,
+				F49C70962481CD9E0029C0C9 /* Common */,
+				F4067B6E247B41DB0005F404 /* Assets */,
+				F41EE4D1247C699800FE2373 /* Third Party */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F4067B61247B41160005F404 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4067B62247B41160005F404 /* EarthTests.swift */,
+				F4067B64247B41160005F404 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F4067B6D247B41D00005F404 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F41EE4C3247C5BE400FE2373 /* Architecture */,
+				F4067B52247B41140005F404 /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F4067B6E247B41DB0005F404 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F4067B56247B41150005F404 /* LaunchScreen.storyboard */,
+				F4067B59247B41150005F404 /* Info.plist */,
+				F4067B54247B41150005F404 /* Assets.xcassets */,
+				F4D1CE51248AB70300239355 /* MapStyle.json */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F4067B6F247B429B0005F404 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				F4067B70247B42A10005F404 /* Map */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		F4067B70247B42A10005F404 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F45C99D924A4179900A3EA8C /* Supplementary */,
+				F4067B72247B42CB0005F404 /* MapViewModel.swift */,
+				F41EE4C8247C5EBA00FE2373 /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F41EE4C3247C5BE400FE2373 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				F41EE4C4247C5BEF00FE2373 /* ViewModel.swift */,
+				F41EE4C6247C5D1B00FE2373 /* BaseViewController.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		F41EE4D1247C699800FE2373 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				F41EE4DC247C9DF800FE2373 /* Geohashing */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		F41EE4DC247C9DF800FE2373 /* Geohashing */ = {
+			isa = PBXGroup;
+			children = (
+				F41EE4D2247C69B300FE2373 /* Geohash.swift */,
+				F41EE4D4247C69DA00FE2373 /* GeohashBox.swift */,
+			);
+			path = Geohashing;
+			sourceTree = "<group>";
+		};
+		F45C99D924A4179900A3EA8C /* Supplementary */ = {
+			isa = PBXGroup;
+			children = (
+				F4D30849248D7F4D00C1EC21 /* MapDrawingView.swift */,
+			);
+			path = Supplementary;
+			sourceTree = "<group>";
+		};
+		F49C70962481CD9E0029C0C9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F49C70972481CDAA0029C0C9 /* Extensions */,
+				F4D3084B248D8D5700C1EC21 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F49C70972481CDAA0029C0C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F49C70982481CE9C0029C0C9 /* Geohash+Earth.swift */,
+				F49C709A2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4067B4E247B41140005F404 /* Earth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4067B67247B41160005F404 /* Build configuration list for PBXNativeTarget "Earth" */;
+			buildPhases = (
+				F4067B4B247B41140005F404 /* Sources */,
+				F4067B4C247B41140005F404 /* Frameworks */,
+				F4067B4D247B41140005F404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Earth;
+			packageProductDependencies = (
+				F41EE4BD247C5BC200FE2373 /* RxSwift */,
+				F41EE4BF247C5BC200FE2373 /* RxRelay */,
+				F41EE4C1247C5BC200FE2373 /* RxCocoa */,
+				F41EE4CF247C666D00FE2373 /* Cartography */,
+				F41EE4D7247C8FEE00FE2373 /* RxGesture */,
+				F41EE4DA247C90DB00FE2373 /* RxOptional */,
+				F4D1CE4F248AB54900239355 /* GoogleMapsTileOverlay */,
+			);
+			productName = Earth;
+			productReference = F4067B4F247B41140005F404 /* Earth.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4067B5D247B41160005F404 /* EarthTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4067B6A247B41160005F404 /* Build configuration list for PBXNativeTarget "EarthTests" */;
+			buildPhases = (
+				F4067B5A247B41160005F404 /* Sources */,
+				F4067B5B247B41160005F404 /* Frameworks */,
+				F4067B5C247B41160005F404 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4067B60247B41160005F404 /* PBXTargetDependency */,
+			);
+			name = EarthTests;
+			productName = EarthTests;
+			productReference = F4067B5E247B41160005F404 /* EarthTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4067B47247B41140005F404 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = Earth;
+				TargetAttributes = {
+					F4067B4E247B41140005F404 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					F4067B5D247B41160005F404 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = F4067B4E247B41140005F404;
+					};
+				};
+			};
+			buildConfigurationList = F4067B4A247B41140005F404 /* Build configuration list for PBXProject "Earth" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4067B46247B41140005F404;
+			packageReferences = (
+				F41EE4BC247C5BC200FE2373 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				F41EE4CE247C666D00FE2373 /* XCRemoteSwiftPackageReference "Cartography" */,
+				F41EE4D6247C8FEE00FE2373 /* XCRemoteSwiftPackageReference "RxGesture" */,
+				F41EE4D9247C90DB00FE2373 /* XCRemoteSwiftPackageReference "RxOptional" */,
+				F4D1CE4E248AB54900239355 /* XCRemoteSwiftPackageReference "GoogleMapsTileOverlay" */,
+			);
+			productRefGroup = F4067B50247B41140005F404 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4067B4E247B41140005F404 /* Earth */,
+				F4067B5D247B41160005F404 /* EarthTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4067B4D247B41140005F404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4067B55247B41150005F404 /* Assets.xcassets in Resources */,
+				F4067B58247B41150005F404 /* LaunchScreen.storyboard in Resources */,
+				F4D1CE52248AB70300239355 /* MapStyle.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4067B5C247B41160005F404 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4067B4B247B41140005F404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49C709B2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift in Sources */,
+				F4067B53247B41140005F404 /* AppDelegate.swift in Sources */,
+				F49C70992481CE9C0029C0C9 /* Geohash+Earth.swift in Sources */,
+				F41EE4C7247C5D1B00FE2373 /* BaseViewController.swift in Sources */,
+				F4D3084A248D7F4D00C1EC21 /* MapDrawingView.swift in Sources */,
+				F41EE4C5247C5BEF00FE2373 /* ViewModel.swift in Sources */,
+				F41EE4D3247C69B300FE2373 /* Geohash.swift in Sources */,
+				F41EE4D5247C69DA00FE2373 /* GeohashBox.swift in Sources */,
+				F41EE4C9247C5EBA00FE2373 /* MapViewController.swift in Sources */,
+				F4067B74247B42CB0005F404 /* MapViewModel.swift in Sources */,
+				F4D3084C248D8D5700C1EC21 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4067B5A247B41160005F404 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4067B63247B41160005F404 /* EarthTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4067B60247B41160005F404 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4067B4E247B41140005F404 /* Earth */;
+			targetProxy = F4067B5F247B41160005F404 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F4067B56247B41150005F404 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4067B57247B41150005F404 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F4067B65247B41160005F404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4067B66247B41160005F404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4067B68247B41160005F404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFJG8LZJ7L;
+				INFOPLIST_FILE = Source/Assets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.simonmanning.Earth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4067B69247B41160005F404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFJG8LZJ7L;
+				INFOPLIST_FILE = Source/Assets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.simonmanning.Earth;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F4067B6B247B41160005F404 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFJG8LZJ7L;
+				INFOPLIST_FILE = EarthTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.simonmanning.EarthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Earth.app/Earth";
+			};
+			name = Debug;
+		};
+		F4067B6C247B41160005F404 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MFJG8LZJ7L;
+				INFOPLIST_FILE = EarthTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.simonmanning.EarthTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Earth.app/Earth";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4067B4A247B41140005F404 /* Build configuration list for PBXProject "Earth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4067B65247B41160005F404 /* Debug */,
+				F4067B66247B41160005F404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4067B67247B41160005F404 /* Build configuration list for PBXNativeTarget "Earth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4067B68247B41160005F404 /* Debug */,
+				F4067B69247B41160005F404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4067B6A247B41160005F404 /* Build configuration list for PBXNativeTarget "EarthTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4067B6B247B41160005F404 /* Debug */,
+				F4067B6C247B41160005F404 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F41EE4BC247C5BC200FE2373 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.1;
+			};
+		};
+		F41EE4CE247C666D00FE2373 /* XCRemoteSwiftPackageReference "Cartography" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/robb/Cartography.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		F41EE4D6247C8FEE00FE2373 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.3;
+			};
+		};
+		F41EE4D9247C90DB00FE2373 /* XCRemoteSwiftPackageReference "RxOptional" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxOptional.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		F4D1CE4E248AB54900239355 /* XCRemoteSwiftPackageReference "GoogleMapsTileOverlay" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thepeaklab/GoogleMapsTileOverlay.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F41EE4BD247C5BC200FE2373 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41EE4BC247C5BC200FE2373 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		F41EE4BF247C5BC200FE2373 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41EE4BC247C5BC200FE2373 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		F41EE4C1247C5BC200FE2373 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41EE4BC247C5BC200FE2373 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		F41EE4CF247C666D00FE2373 /* Cartography */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41EE4CE247C666D00FE2373 /* XCRemoteSwiftPackageReference "Cartography" */;
+			productName = Cartography;
+		};
+		F41EE4D7247C8FEE00FE2373 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41EE4D6247C8FEE00FE2373 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
+		F41EE4DA247C90DB00FE2373 /* RxOptional */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41EE4D9247C90DB00FE2373 /* XCRemoteSwiftPackageReference "RxOptional" */;
+			productName = RxOptional;
+		};
+		F4D1CE4F248AB54900239355 /* GoogleMapsTileOverlay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4D1CE4E248AB54900239355 /* XCRemoteSwiftPackageReference "GoogleMapsTileOverlay" */;
+			productName = GoogleMapsTileOverlay;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F4067B47247B41140005F404 /* Project object */;
+}
