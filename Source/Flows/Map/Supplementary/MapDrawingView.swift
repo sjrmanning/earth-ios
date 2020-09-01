@@ -15,26 +15,12 @@ import RxSwift
 
 final class MapDrawingView: UIView {
 
-    // MARK: - Types
-
-    /// Represents a drawn pixel on top of the map.
-    struct MapPixel {
-        /// Geohash location of pixel.
-        let geohash: String
-
-        /// MapKit equivalent coordinate region.
-        let region: MKCoordinateRegion
-
-        /// Pixel color.
-        let color: UIColor
-    }
-
     // MARK: - Properties
 
     private weak var mapView: MKMapView?
 
-    fileprivate let pixelEvent = PublishRelay<MapPixel>()
-    fileprivate let pixels = BehaviorRelay<[MapPixel]>(value: [])
+    let pixelEvent = PublishRelay<MapPixel>()
+    let pixels = BehaviorRelay<[MapPixel]>(value: [])
 
     private var lastTouchPoint: Any?
     private let hashPixelPrecision: Int
@@ -128,12 +114,12 @@ final class MapDrawingView: UIView {
 
 extension Reactive where Base: MapDrawingView {
     /// Stream of active total pixels.
-    var accumulatedPixels: Driver<[MapDrawingView.MapPixel]> {
+    var accumulatedPixels: Driver<[MapPixel]> {
         base.pixels.asDriver()
     }
 
     /// Stream of pixels as they come through.
-    var singlePixels: Driver<MapDrawingView.MapPixel> {
+    var singlePixels: Driver<MapPixel> {
         base.pixelEvent.asDriver(onErrorDriveWith: .never())
     }
 }

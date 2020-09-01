@@ -48,6 +48,12 @@ final class MapViewController: BaseViewController<MapViewModel> {
         MapDrawingView(mapView: mapView)
     }()
 
+    private lazy var readOnlyView: MapDrawingView = {
+        let view = MapDrawingView(mapView: mapView)
+        view.isUserInteractionEnabled = false
+        return view
+    }()
+
     // MARK: - Setup
 
     override func setupSubviews() {
@@ -55,6 +61,7 @@ final class MapViewController: BaseViewController<MapViewModel> {
 
         view.backgroundColor = .white
         view.addSubview(mapView)
+        view.addSubview(readOnlyView)
         view.addSubview(drawView)
         view.addSubview(modeView)
 
@@ -79,6 +86,7 @@ final class MapViewController: BaseViewController<MapViewModel> {
         super.setupConstraints()
 
         constrain(view, mapView) { $1.edges == $0.edges }
+        constrain(mapView, readOnlyView) { $1.edges == $0.edges }
         constrain(view, modeView) { view, mode in
             mode.left >= view.left + 32
             mode.right <= view.right - 32
@@ -89,6 +97,12 @@ final class MapViewController: BaseViewController<MapViewModel> {
 
     override func bindEvents() {
         super.bindEvents()
+
+        // Push pixels from the VM to the read-only view for rendering.
+        viewModel.visiblePixels.subscribe(onNext: { [weak readOnlyView] pixels in
+            readOnlyView?.pixels.accept(pixels)
+            readOnlyView?.setNeedsDisplay()
+        }).disposed(by: disposeBag)
 
         // Mode change event
         let modes: [Int: MapViewModel.Mode] = [0: .explore, 1: .draw]
@@ -104,7 +118,7 @@ final class MapViewController: BaseViewController<MapViewModel> {
 
         // Capture each new pixel as drawn as an event.
         drawView.rx.singlePixels
-            .map { .drew(at: $0.region.center) }
+            .map { .drew(pixel: $0) }
             .asObservable()
             .bind(to: eventRelay)
             .disposed(by: disposeBag)
@@ -117,15 +131,15 @@ final class MapViewController: BaseViewController<MapViewModel> {
             mapView.isScrollEnabled = true
 
         case let .drawing(region):
-            redisplayDrawView(in: region)
+            drawView.isHidden = false
+            redisplayPixelViews(in: region)
             mapView.isScrollEnabled = false
         }
     }
 
     // MARK: - Private
 
-    private func redisplayDrawView(in region: MKCoordinateRegion) {
-        drawView.isHidden = false
+    private func redisplayPixelViews(in region: MKCoordinateRegion) {
         drawView.frame = mapView.convert(region, toRectTo: view)
         drawView.setNeedsDisplay()
     }
@@ -135,11 +149,13 @@ final class MapViewController: BaseViewController<MapViewModel> {
 
 extension MapViewController: MKMapViewDelegate {
     func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        readOnlyView.setNeedsDisplay()
+
         guard case let .drawing(region) = viewModel.state.value else {
             return
         }
 
-        redisplayDrawView(in: region)
+        redisplayPixelViews(in: region)
     }
 
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

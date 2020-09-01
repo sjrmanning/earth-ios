@@ -11,7 +11,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol ViewModel {
+protocol ViewModel: AnyObject {
     associatedtype State
     associatedtype Event
 
@@ -19,7 +19,7 @@ protocol ViewModel {
     var state: BehaviorRelay<State> { get }
 
     /// State machine reduction.
-    static func reduce(_ state: State, _ event: Event) -> State
+    func reduce(_ state: State, _ event: Event) -> State
 }
 
 extension ViewModel {
@@ -30,7 +30,8 @@ extension ViewModel {
     func bindEvents(_ events: PublishRelay<Event>) -> Disposable {
         events
             .withLatestFrom(state) { ($1, $0) }
-            .map { Self.reduce($0, $1) }
+            .map { [weak self] in self?.reduce($0, $1) }
+            .filterNil()
             .bind(to: state)
     }
 }

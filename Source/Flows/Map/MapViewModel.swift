@@ -23,6 +23,8 @@ final class MapViewModel: ViewModel {
     // MARK: - Properties
 
     let state = BehaviorRelay<State>(value: .exploring)
+    let visiblePixels = BehaviorRelay<[MapPixel]>(value: [])
+
     private let disposeBag = DisposeBag()
 }
 
@@ -36,22 +38,21 @@ extension MapViewModel {
 
     enum Event {
         case changedMode(Mode, region: MKCoordinateRegion)
-        case drew(at: CLLocationCoordinate2D)
+        case drew(pixel: MapPixel)
+        case regionChanged(region: MKCoordinateRegion)
     }
 
-    static func reduce(_ state: State, _ event: Event) -> State {
+    func reduce(_ state: State, _ event: Event) -> State {
         switch (state, event) {
 
-        case let (.drawing(area), .drew(location)):
-            // TODO: Send these locations/geohashes through to backend for live drawing and persistence.
-            debugPrint("Drew on location: \(location)")
-            guard let geohash = Geohash.geohashbox(latitude: location.latitude,
-                                                   longitude: location.longitude,
-                                                   10) else {
-                                                    return .drawing(area: area)
-            }
+        case let (state, .regionChanged(_)):
+            // TODO: Determine visible pixels specific to this region.
+            // Eventually ping socket to get updates, but for now we don't have any pixels to add.
+            return state
 
-            debugPrint("Would capture geohash: \(geohash) and push to socket.")
+        case let (.drawing(area), .drew(pixel)):
+            // TODO: Send these locations/geohashes through to backend for live drawing and persistence.
+            visiblePixels.accept(visiblePixels.value + [pixel])
             return .drawing(area: area)
 
         case let (_, .changedMode(mode, region)):

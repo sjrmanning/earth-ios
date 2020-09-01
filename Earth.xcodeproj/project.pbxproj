@@ -25,6 +25,7 @@
 		F41EE4DB247C90DB00FE2373 /* RxOptional in Frameworks */ = {isa = PBXBuildFile; productRef = F41EE4DA247C90DB00FE2373 /* RxOptional */; };
 		F49C70992481CE9C0029C0C9 /* Geohash+Earth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C70982481CE9C0029C0C9 /* Geohash+Earth.swift */; };
 		F49C709B2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49C709A2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift */; };
+		F4AEE33324A6B25800C5D44D /* MapPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AEE33224A6B25800C5D44D /* MapPixel.swift */; };
 		F4D1CE50248AB54900239355 /* GoogleMapsTileOverlay in Frameworks */ = {isa = PBXBuildFile; productRef = F4D1CE4F248AB54900239355 /* GoogleMapsTileOverlay */; };
 		F4D1CE52248AB70300239355 /* MapStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = F4D1CE51248AB70300239355 /* MapStyle.json */; };
 		F4D3084A248D7F4D00C1EC21 /* MapDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D30849248D7F4D00C1EC21 /* MapDrawingView.swift */; };
@@ -58,6 +59,7 @@
 		F41EE4D4247C69DA00FE2373 /* GeohashBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeohashBox.swift; sourceTree = "<group>"; };
 		F49C70982481CE9C0029C0C9 /* Geohash+Earth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Geohash+Earth.swift"; sourceTree = "<group>"; };
 		F49C709A2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Earth.swift"; sourceTree = "<group>"; };
+		F4AEE33224A6B25800C5D44D /* MapPixel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPixel.swift; sourceTree = "<group>"; };
 		F4D1CE51248AB70300239355 /* MapStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MapStyle.json; sourceTree = "<group>"; };
 		F4D30849248D7F4D00C1EC21 /* MapDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDrawingView.swift; sourceTree = "<group>"; };
 		F4D3084B248D8D5700C1EC21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			children = (
 				F4067B6F247B429B0005F404 /* Flows */,
 				F4067B6D247B41D00005F404 /* Core */,
+				F4AEE33124A6B24B00C5D44D /* Models */,
 				F49C70962481CD9E0029C0C9 /* Common */,
 				F4067B6E247B41DB0005F404 /* Assets */,
 				F41EE4D1247C699800FE2373 /* Third Party */,
@@ -215,6 +218,14 @@
 				F49C709A2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F4AEE33124A6B24B00C5D44D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4AEE33224A6B25800C5D44D /* MapPixel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F49C709B2481D40E0029C0C9 /* MKCoordinateRegion+Earth.swift in Sources */,
+				F4AEE33324A6B25800C5D44D /* MapPixel.swift in Sources */,
 				F4067B53247B41140005F404 /* AppDelegate.swift in Sources */,
 				F49C70992481CE9C0029C0C9 /* Geohash+Earth.swift in Sources */,
 				F41EE4C7247C5D1B00FE2373 /* BaseViewController.swift in Sources */,
